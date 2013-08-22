@@ -1,0 +1,21 @@
+{
+	"name": "AutoBlankLink",
+	"version": "1.0",
+	"manifest_version": 2,
+	"description": "Set all link default as _blank",
+	"icons": {
+		"128": "img/128.png",
+		"48": "img/48.png",
+		"16": "img/16.png"
+	},
+	"content_scripts": [ {
+		"all_frames": true,
+		"js": [ "js/content.js" ],
+		"matches": [ "<all_urls>" ],
+		"run_at": "document_end"
+	} ],
+	"content_security_policy": "script-src 'self'; object-src 'self'",
+	"permissions": [
+		"<all_urls>"
+	]
+}
